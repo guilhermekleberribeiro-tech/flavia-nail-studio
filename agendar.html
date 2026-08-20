@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agendar horário · Flávia Nail Studio</title>
+<meta name="description" content="Marque seu horário em menos de um minuto.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,500;0,700;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body class="pagina-agendar">
+
+<div class="wrap">
+
+  <div class="agendar-topo">
+    <a href="index.html" data-logo class="grande"></a>
+    <h1 class="titulo" style="margin-top:22px">Agendar <em>horário</em></h1>
+    <p style="color:var(--texto-suave);font-weight:300">Leva menos de um minuto. Você recebe a confirmação no WhatsApp.</p>
+  </div>
+
+  <!-- ══════════ FORMULÁRIO ══════════ -->
+  <form class="form-box" id="formAgenda" style="margin-bottom:20px">
+
+    <!-- passo 1 -->
+    <div class="bloco">
+      <div class="passo-titulo"><span class="passo-num">1</span><h3>Escolha o serviço</h3></div>
+      <div class="opcoes-servico" id="opcoes"></div>
+    </div>
+
+    <!-- passo 2 -->
+    <div class="bloco">
+      <div class="passo-titulo"><span class="passo-num">2</span><h3>Escolha o dia e a hora</h3></div>
+      <div class="campo" style="max-width:280px;margin-bottom:18px">
+        <label for="data">Data</label>
+        <input type="date" id="data" required>
+      </div>
+      <div class="campo">
+        <label>Horários disponíveis</label>
+        <div class="horarios" id="grade">
+          <span style="grid-column:1/-1;color:var(--texto-suave);font-size:.86rem;font-weight:300">Escolha uma data para ver os horários livres.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- passo 3 -->
+    <div class="bloco">
+      <div class="passo-titulo"><span class="passo-num">3</span><h3>Seus dados</h3></div>
+      <div class="linha-campos">
+        <div class="campo">
+          <label for="nome">Seu nome</label>
+          <input type="text" id="nome" placeholder="Como podemos te chamar?" required>
+        </div>
+        <div class="campo">
+          <label for="fone">Seu WhatsApp</label>
+          <input type="tel" id="fone" placeholder="(11) 99999-9999" required>
+        </div>
+      </div>
+      <div class="campo" style="margin-top:18px">
+        <label for="obs">Alguma observação? <span style="font-weight:400;color:var(--texto-suave)">(opcional)</span></label>
+        <textarea id="obs" placeholder="Ex.: vou levar uma amiga, prefiro cor nude, tenho alergia a algum produto..."></textarea>
+      </div>
+    </div>
+
+    <!-- resumo -->
+    <div id="caixaResumo" style="display:none;margin-top:26px">
+      <div class="passo-titulo"><span class="passo-num">✓</span><h3>Confira antes de confirmar</h3></div>
+      <div class="resumo" id="resumo"></div>
+    </div>
+
+    <div class="aviso" id="aviso"></div>
+
+    <div class="rodape-form">
+      <small id="textoRodape">Você receberá a confirmação no WhatsApp informado.</small>
+      <button type="submit" class="btn" id="btnEnviar" style="min-width:230px">Confirmar agendamento</button>
+    </div>
+  </form>
+
+  <!-- ══════════ TELA DE SUCESSO ══════════ -->
+  <div class="form-box" id="telaSucesso" style="display:none">
+    <div class="sucesso">
+      <div class="marca">✓</div>
+      <h2 class="titulo" style="font-size:1.9rem">Agendamento <em>enviado!</em></h2>
+      <p style="color:var(--texto-suave);font-weight:300;max-width:440px;margin:0 auto 8px" id="textoSucesso"></p>
+      <div class="resumo" id="resumoFinal" style="text-align:left;max-width:420px;margin:24px auto"></div>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:8px">
+        <a href="#" data-zap target="_blank" rel="noopener" class="btn zap">Abrir conversa no WhatsApp</a>
+        <a href="agendar.html" class="btn linha">Fazer outro agendamento</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="center" style="padding-bottom:50px">
+    <a href="index.html" class="voltar-site">← Voltar para o site</a>
+    <span style="color:#E5D3DC;margin:0 10px">|</span>
+    <a href="#" data-abrir-painel class="voltar-site">Painel da profissional</a>
+  </div>
+
+</div>
+
+<a href="#" data-zap class="zap-flut" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.86 1.21 3.06c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35zM12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.07L2 22l5.05-1.33A9.94 9.94 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
+</a>
+
+<div class="modal" id="modalPainel"></div>
+
+<script src="config.js"></script>
+<script src="agenda.js"></script>
+<script>
+iniciarComum();
+limitesDeData("data");
+
+let servicoEscolhido = null;
+let horaEscolhida = null;
+
+/* ---------- passo 1: serviços ---------- */
+document.getElementById("opcoes").innerHTML = CONFIG.servicos.map(s => `
+  <div class="opcao" data-servico="${s.nome}">
+    <span><b>${s.nome}</b><small>${s.obs}</small></span>
+    <span class="valor">${s.preco}</span>
+  </div>`).join("");
+
+document.querySelectorAll(".opcao").forEach(el => {
+  el.addEventListener("click", () => {
+    document.querySelectorAll(".opcao").forEach(o => o.classList.remove("ativa"));
+    el.classList.add("ativa");
+    servicoEscolhido = el.dataset.servico;
+    atualizarResumo();
+  });
+});
+
+/* serviço pré-selecionado pelo link (ex.: agendar.html?servico=Manicure) */
+const servicoNaURL = new URLSearchParams(location.search).get("servico");
+if(servicoNaURL){
+  const alvo = document.querySelector(`.opcao[data-servico="${CSS.escape(servicoNaURL)}"]`);
+  if(alvo) alvo.click();
+}
+
+/* ---------- passo 2: data e hora ---------- */
+window.recarregarGrade = () => {
+  horaEscolhida = null;
+  montarGrade("data", "grade", h => { horaEscolhida = h; atualizarResumo(); });
+  atualizarResumo();
+};
+document.getElementById("data").addEventListener("change", window.recarregarGrade);
+
+/* ---------- resumo ---------- */
+function atualizarResumo(){
+  const caixa = document.getElementById("caixaResumo");
+  if(!servicoEscolhido || !horaEscolhida){ caixa.style.display = "none"; return; }
+  const s = CONFIG.servicos.find(x => x.nome === servicoEscolhido);
+  document.getElementById("resumo").innerHTML = `
+    <div class="resumo-linha"><span>Serviço</span><span>${s.nome}</span></div>
+    <div class="resumo-linha"><span>Duração</span><span>${s.obs}</span></div>
+    <div class="resumo-linha"><span>Data</span><span>${dataBR(document.getElementById("data").value)}</span></div>
+    <div class="resumo-linha"><span>Horário</span><span>${horaEscolhida}</span></div>
+    <div class="resumo-linha" style="border-top:1px solid var(--rosa-claro);margin-top:6px;padding-top:12px">
+      <span>Valor</span><span style="color:var(--rosa);font-size:1.05rem">${s.preco}</span></div>`;
+  caixa.style.display = "block";
+}
+
+/* ---------- envio ---------- */
+function mostrarAviso(texto, tipo){
+  const a = document.getElementById("aviso");
+  a.textContent = texto;
+  a.className = "aviso " + tipo;
+  a.scrollIntoView({behavior:"smooth", block:"center"});
+}
+
+document.getElementById("formAgenda").addEventListener("submit", async e => {
+  e.preventDefault();
+
+  if(!servicoEscolhido){ mostrarAviso("Escolha um serviço no passo 1.", "erro"); return; }
+  if(!document.getElementById("data").value){ mostrarAviso("Escolha uma data no passo 2.", "erro"); return; }
+  if(!horaEscolhida){ mostrarAviso("Escolha um horário disponível no passo 2.", "erro"); return; }
+
+  const dados = {
+    nome: document.getElementById("nome").value.trim(),
+    fone: document.getElementById("fone").value.trim(),
+    servico: servicoEscolhido,
+    data: document.getElementById("data").value,
+    hora: horaEscolhida,
+    obs: document.getElementById("obs").value.trim()
+  };
+
+  const btn = document.getElementById("btnEnviar");
+  btn.disabled = true;
+  btn.textContent = "Enviando...";
+
+  const r = await enviarAgendamento(dados);
+
+  // guarda o resumo antes de trocar de tela
+  const resumoHTML = document.getElementById("resumo").innerHTML;
+
+  document.getElementById("formAgenda").style.display = "none";
+  const tela = document.getElementById("telaSucesso");
+  tela.style.display = "block";
+  document.getElementById("resumoFinal").innerHTML = resumoHTML +
+    `<div class="resumo-linha"><span>Em nome de</span><span>${dados.nome}</span></div>`;
+
+  document.getElementById("textoSucesso").textContent =
+    r.modo === "automatico"
+      ? `Pronto, ${dados.nome}! A Flávia já foi avisada e a confirmação está chegando no seu WhatsApp.`
+      : `Quase lá, ${dados.nome}! Abrimos o WhatsApp com a mensagem pronta — é só apertar enviar para a Flávia confirmar.`;
+
+  scrollTo({top:0, behavior:"smooth"});
+});
+</script>
+</body>
+</html>

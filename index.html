@@ -4,227 +4,28 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Flávia Nail Studio · Cuidado, beleza e carinho em cada detalhe</title>
-<meta name="description" content="Manicure, pedicure, alongamento e Plástica dos Pés. Agende seu horário pelo WhatsApp.">
+<meta name="description" content="Manicure, pedicure, alongamento em gel e Plástica dos Pés. Agende seu horário pelo WhatsApp.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<style>
-/* ============================================================
-   >>> EDITE AQUI AS CORES SE QUISER <<<
-   ============================================================ */
-:root{
-  --rosa:#E5136E;         /* rosa vibrante principal */
-  --rosa-escuro:#A80D51;
-  --rosa-claro:#FFE4F0;
-  --rosa-suave:#FFF5F9;
-  --branco:#FFFFFF;
-  --texto:#3A2530;
-  --texto-suave:#7A6570;
-  --verde-zap:#25D366;
-  --sombra:0 10px 34px rgba(229,19,110,.12);
-  --sombra-forte:0 18px 50px rgba(229,19,110,.20);
-  --raio:20px;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:'Poppins',system-ui,sans-serif;color:var(--texto);background:var(--branco);line-height:1.65;overflow-x:hidden}
-h1,h2,h3,.serif{font-family:'Playfair Display',Georgia,serif}
-a{color:inherit;text-decoration:none}
-img{max-width:100%;display:block}
-.wrap{width:min(1140px,92vw);margin:0 auto}
-section{padding:90px 0}
-.center{text-align:center}
-
-/* ---------- Títulos de seção ---------- */
-.tag{display:inline-block;background:var(--rosa-claro);color:var(--rosa);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;padding:8px 18px;border-radius:999px;margin-bottom:18px}
-.titulo{font-size:clamp(1.9rem,4.6vw,3rem);line-height:1.15;margin-bottom:14px}
-.titulo em{color:var(--rosa);font-style:italic}
-.sub{color:var(--texto-suave);max-width:620px;margin:0 auto 46px;font-weight:300}
-
-/* ---------- Botões ---------- */
-.btn{display:inline-flex;align-items:center;gap:10px;background:var(--rosa);color:#fff;padding:15px 32px;border-radius:999px;font-weight:600;font-size:.95rem;border:none;cursor:pointer;transition:.25s;box-shadow:0 8px 22px rgba(229,19,110,.32);font-family:inherit}
-.btn:hover{background:var(--rosa-escuro);transform:translateY(-2px);box-shadow:0 12px 28px rgba(229,19,110,.4)}
-.btn.zap{background:var(--verde-zap);box-shadow:0 8px 22px rgba(37,211,102,.35)}
-.btn.zap:hover{background:#1da851}
-.btn.linha{background:transparent;color:var(--rosa);border:1.6px solid var(--rosa);box-shadow:none}
-.btn.linha:hover{background:var(--rosa);color:#fff}
-.btn.pequeno{padding:10px 20px;font-size:.83rem}
-
-/* ---------- Cabeçalho ---------- */
-header{position:fixed;top:0;left:0;right:0;z-index:900;padding:16px 0;transition:.3s;background:transparent}
-header.solido{background:rgba(255,255,255,.96);backdrop-filter:blur(12px);box-shadow:0 2px 20px rgba(0,0,0,.06);padding:10px 0}
-.nav{display:flex;align-items:center;justify-content:space-between}
-.logo{display:flex;align-items:center;gap:11px;font-family:'Playfair Display',serif;font-size:1.45rem;font-weight:700;color:var(--rosa)}
-.logo span{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--rosa),#FF6FA8);display:grid;place-items:center;color:#fff;font-size:1.1rem;box-shadow:0 4px 14px rgba(229,19,110,.35)}
-.menu{display:flex;gap:30px;align-items:center}
-.menu a{font-size:.9rem;font-weight:500;position:relative;padding:4px 0}
-.menu a::after{content:'';position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--rosa);transition:.25s}
-.menu a:hover::after{width:100%}
-.abrir-menu{display:none;background:none;border:none;font-size:1.7rem;color:var(--rosa);cursor:pointer;line-height:1}
-
-/* ---------- Hero ---------- */
-.hero{min-height:100vh;display:flex;align-items:center;padding:120px 0 70px;background:
-  radial-gradient(1000px 620px at 88% 8%,var(--rosa-claro) 0%,transparent 62%),
-  linear-gradient(170deg,var(--rosa-suave) 0%,#fff 58%);position:relative;overflow:hidden}
-.hero::after{content:'';position:absolute;right:-160px;bottom:-160px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(229,19,110,.10),transparent 68%)}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;position:relative;z-index:2}
-.hero h1{font-size:clamp(2.4rem,6vw,4.1rem);line-height:1.08;margin:14px 0 20px}
-.hero h1 em{color:var(--rosa);font-style:italic;display:block}
-.hero p.lead{font-size:1.06rem;color:var(--texto-suave);font-weight:300;max-width:480px;margin-bottom:32px}
-.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
-.selos{display:flex;gap:34px;margin-top:46px;flex-wrap:wrap}
-.selo b{display:block;font-family:'Playfair Display',serif;font-size:1.75rem;color:var(--rosa);line-height:1}
-.selo small{font-size:.78rem;color:var(--texto-suave);letter-spacing:.04em}
-.hero-art{position:relative;aspect-ratio:4/5;border-radius:200px 200px 30px 30px;background:linear-gradient(150deg,#FFD3E6,#FFEAF3 55%,#fff);box-shadow:var(--sombra-forte);display:grid;place-items:center;overflow:hidden}
-.hero-art .mao{font-size:clamp(6rem,15vw,11rem);filter:drop-shadow(0 14px 26px rgba(229,19,110,.22))}
-.flutua{position:absolute;background:#fff;border-radius:16px;padding:12px 18px;box-shadow:var(--sombra);font-size:.8rem;font-weight:600;display:flex;align-items:center;gap:9px}
-.flutua i{font-style:normal;font-size:1.15rem}
-.f1{top:14%;left:-26px;animation:sobe 4.5s ease-in-out infinite}
-.f2{bottom:16%;right:8px;animation:sobe 4.5s ease-in-out infinite .9s}
-@keyframes sobe{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
-
-/* ---------- Serviços ---------- */
-#servicos{background:var(--branco)}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:24px}
-.card{background:#fff;border:1.5px solid var(--rosa-claro);border-radius:var(--raio);padding:32px 26px;transition:.28s;position:relative;display:flex;flex-direction:column}
-.card:hover{transform:translateY(-7px);box-shadow:var(--sombra);border-color:rgba(229,19,110,.35)}
-.card .ico{width:56px;height:56px;border-radius:16px;background:var(--rosa-suave);display:grid;place-items:center;font-size:1.6rem;margin-bottom:18px}
-.card h3{font-size:1.22rem;margin-bottom:8px}
-.card p{font-size:.9rem;color:var(--texto-suave);font-weight:300;margin-bottom:18px;flex:1}
-.preco{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--rosa);font-weight:700}
-.preco small{font-size:.72rem;color:var(--texto-suave);font-family:'Poppins';font-weight:400;display:block}
-.card.destaque{background:linear-gradient(160deg,var(--rosa),#FF4F91);border:none;color:#fff}
-.card.destaque .ico{background:rgba(255,255,255,.2)}
-.card.destaque p{color:rgba(255,255,255,.9)}
-.card.destaque .preco{color:#fff}
-.card.destaque .preco small{color:rgba(255,255,255,.8)}
-.fita{position:absolute;top:16px;right:-6px;background:#fff;color:var(--rosa);font-size:.66rem;font-weight:700;letter-spacing:.1em;padding:6px 14px;border-radius:6px;text-transform:uppercase;box-shadow:0 4px 12px rgba(0,0,0,.14)}
-
-/* ---------- Destaque Plástica dos Pés ---------- */
-#plastica{background:linear-gradient(160deg,var(--rosa-suave),#fff)}
-.plastica-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.passos{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:28px}
-.passo{background:#fff;border-radius:16px;padding:20px;box-shadow:0 6px 20px rgba(229,19,110,.08)}
-.passo b{display:block;color:var(--rosa);font-size:.72rem;letter-spacing:.14em;margin-bottom:6px}
-.passo span{font-size:.88rem;font-weight:300;color:var(--texto-suave)}
-.caixa-pes{background:#fff;border-radius:var(--raio);padding:38px;box-shadow:var(--sombra);border:1.5px solid var(--rosa-claro)}
-.caixa-pes ul{list-style:none;margin-top:18px}
-.caixa-pes li{padding:11px 0 11px 32px;position:relative;font-size:.93rem;font-weight:300;border-bottom:1px dashed var(--rosa-claro)}
-.caixa-pes li:last-child{border:none}
-.caixa-pes li::before{content:'✓';position:absolute;left:0;top:10px;width:20px;height:20px;background:var(--rosa);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.7rem;font-weight:700}
-
-/* ---------- Agendamento ---------- */
-#agendar{background:var(--branco)}
-.form-box{background:#fff;border-radius:26px;box-shadow:var(--sombra-forte);padding:44px;max-width:820px;margin:0 auto;border-top:5px solid var(--rosa)}
-.linha-campos{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px}
-.campo{display:flex;flex-direction:column;gap:7px}
-.campo label{font-size:.8rem;font-weight:600;color:var(--texto)}
-.campo input,.campo select,.campo textarea{padding:13px 16px;border:1.5px solid #F0DDE6;border-radius:12px;font-family:inherit;font-size:.92rem;background:#fff;color:var(--texto);transition:.2s}
-.campo input:focus,.campo select:focus,.campo textarea:focus{outline:none;border-color:var(--rosa);box-shadow:0 0 0 4px rgba(229,19,110,.10)}
-.campo textarea{resize:vertical;min-height:82px}
-.horarios{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:10px;margin-top:8px}
-.hora{padding:11px 6px;border:1.5px solid #F0DDE6;border-radius:11px;text-align:center;font-size:.86rem;font-weight:500;cursor:pointer;transition:.18s;background:#fff}
-.hora:hover:not(.ocupada){border-color:var(--rosa);color:var(--rosa)}
-.hora.ativa{background:var(--rosa);color:#fff;border-color:var(--rosa)}
-.hora.ocupada{background:#F6F1F3;color:#C3B4BB;cursor:not-allowed;text-decoration:line-through}
-.aviso{margin-top:22px;padding:15px 18px;border-radius:13px;font-size:.87rem;display:none}
-.aviso.ok{background:#E9F9EF;color:#1B7A42;display:block}
-.aviso.erro{background:#FDEBEF;color:#B4123C;display:block}
-.rodape-form{display:flex;gap:14px;align-items:center;justify-content:space-between;margin-top:26px;flex-wrap:wrap}
-.rodape-form small{color:var(--texto-suave);font-size:.8rem;max-width:330px;font-weight:300}
-
-/* ---------- Galeria ---------- */
-#galeria{background:var(--rosa-suave)}
-.galeria-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
-.foto{aspect-ratio:1;border-radius:var(--raio);background:linear-gradient(150deg,#FFD3E6,#FFF0F6);display:grid;place-items:center;font-size:3.4rem;position:relative;overflow:hidden;transition:.3s;cursor:default}
-.foto:hover{transform:scale(1.03);box-shadow:var(--sombra)}
-.foto b{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(168,13,81,.82));color:#fff;font-size:.85rem;padding:26px 16px 14px;font-weight:500}
-
-/* ---------- Sobre ---------- */
-#sobre{background:#fff}
-.sobre-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
-.retrato{aspect-ratio:1;border-radius:50%;background:linear-gradient(150deg,var(--rosa-claro),#fff);display:grid;place-items:center;font-size:7rem;box-shadow:var(--sombra);border:8px solid #fff;outline:2px solid var(--rosa-claro)}
-.sobre-grid p{color:var(--texto-suave);font-weight:300;margin-bottom:16px}
-.assinatura{font-family:'Playfair Display',serif;font-style:italic;font-size:2rem;color:var(--rosa);margin-top:10px}
-
-/* ---------- Localização ---------- */
-#local{background:var(--rosa-suave)}
-.local-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:stretch}
-.mapa{border-radius:var(--raio);overflow:hidden;box-shadow:var(--sombra);min-height:340px;background:#eee}
-.mapa iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
-.info-local{background:#fff;border-radius:var(--raio);padding:36px;box-shadow:var(--sombra);display:flex;flex-direction:column;justify-content:center;gap:22px}
-.item-local{display:flex;gap:14px;align-items:flex-start}
-.item-local i{font-style:normal;font-size:1.3rem;background:var(--rosa-suave);width:44px;height:44px;border-radius:12px;display:grid;place-items:center;flex-shrink:0}
-.item-local b{display:block;font-size:.93rem;margin-bottom:2px}
-.item-local span{font-size:.87rem;color:var(--texto-suave);font-weight:300}
-
-/* ---------- Rodapé ---------- */
-footer{background:var(--texto);color:#fff;padding:60px 0 26px}
-.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:40px}
-footer h4{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:#FF87B8;margin-bottom:16px}
-footer p,footer a{color:rgba(255,255,255,.72);font-size:.88rem;font-weight:300}
-footer a:hover{color:#fff}
-.foot-links{display:flex;flex-direction:column;gap:9px}
-.copy{border-top:1px solid rgba(255,255,255,.12);padding-top:22px;text-align:center;font-size:.78rem;color:rgba(255,255,255,.5)}
-.copy a{color:#FF87B8}
-
-/* ---------- Botão flutuante ---------- */
-.zap-flut{position:fixed;right:22px;bottom:22px;z-index:950;width:60px;height:60px;border-radius:50%;background:var(--verde-zap);display:grid;place-items:center;box-shadow:0 8px 26px rgba(37,211,102,.45);transition:.25s;color:#fff}
-.zap-flut:hover{transform:scale(1.09)}
-.zap-flut svg{width:31px;height:31px;fill:#fff}
-.zap-flut::before{content:'';position:absolute;inset:0;border-radius:50%;background:var(--verde-zap);animation:pulso 2.2s infinite;z-index:-1}
-@keyframes pulso{0%{transform:scale(1);opacity:.65}100%{transform:scale(1.75);opacity:0}}
-
-/* ---------- Painel ---------- */
-.modal{position:fixed;inset:0;background:rgba(58,37,48,.72);backdrop-filter:blur(5px);z-index:1000;display:none;align-items:center;justify-content:center;padding:20px}
-.modal.aberto{display:flex}
-.modal-box{background:#fff;border-radius:22px;width:min(760px,96vw);max-height:88vh;overflow-y:auto;padding:34px}
-.modal-topo{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}
-.fechar{background:none;border:none;font-size:1.7rem;cursor:pointer;color:var(--texto-suave);line-height:1}
-.tabela{width:100%;border-collapse:collapse;font-size:.85rem;margin-top:8px}
-.tabela th{text-align:left;padding:11px 8px;border-bottom:2px solid var(--rosa-claro);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--texto-suave)}
-.tabela td{padding:12px 8px;border-bottom:1px solid #F6EEF2}
-.vazio{text-align:center;color:var(--texto-suave);padding:34px;font-weight:300;font-size:.9rem}
-.mini{background:var(--rosa-suave);border:none;color:var(--rosa);padding:6px 12px;border-radius:8px;font-size:.76rem;cursor:pointer;font-family:inherit;font-weight:600}
-.mini:hover{background:var(--rosa);color:#fff}
-.abas{display:flex;gap:8px;margin-bottom:20px;border-bottom:1.5px solid var(--rosa-claro)}
-.aba{background:none;border:none;padding:10px 18px;font-family:inherit;font-size:.87rem;font-weight:600;color:var(--texto-suave);cursor:pointer;border-bottom:2.5px solid transparent;margin-bottom:-1.5px}
-.aba.ativa{color:var(--rosa);border-color:var(--rosa)}
-.painel-aba{display:none}
-.painel-aba.ativa{display:block}
-
-/* ---------- Responsivo ---------- */
-@media(max-width:900px){
-  .menu{position:fixed;top:0;right:-100%;width:76%;max-width:320px;height:100vh;background:#fff;flex-direction:column;justify-content:center;gap:26px;transition:.35s;box-shadow:-8px 0 40px rgba(0,0,0,.14)}
-  .menu.aberto{right:0}
-  .abrir-menu{display:block;z-index:1001;position:relative}
-  .hero-grid,.plastica-grid,.sobre-grid,.local-grid,.foot-grid{grid-template-columns:1fr}
-  .hero-art{max-width:340px;margin:0 auto;order:-1}
-  .flutua{display:none}
-  .linha-campos{grid-template-columns:1fr}
-  .form-box{padding:28px 22px}
-  section{padding:64px 0}
-  .retrato{max-width:260px;margin:0 auto}
-  .passos{grid-template-columns:1fr}
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,500;0,700;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilo.css">
 </head>
 <body>
 
 <!-- ══════════ CABEÇALHO ══════════ -->
 <header id="topo">
   <div class="wrap nav">
-    <a href="#" class="logo"><span>💅</span> Flávia</a>
+    <a href="#" data-logo></a>
     <nav class="menu" id="menu">
       <a href="#servicos">Serviços</a>
       <a href="#plastica">Plástica dos Pés</a>
-      <a href="#agendar">Agendar</a>
+      <a href="agendar.html">Agendar</a>
       <a href="#galeria">Galeria</a>
       <a href="#sobre">Sobre</a>
       <a href="#local">Onde estamos</a>
-      <a href="#" onclick="abrirPainel(event)" style="color:var(--rosa);font-weight:600">Painel</a>
+      <a href="#" data-abrir-painel style="color:var(--rosa);font-weight:600">Painel</a>
     </nav>
-    <button class="abrir-menu" onclick="alternarMenu()" aria-label="Menu">☰</button>
+    <button class="abrir-menu" id="btnMenu" aria-label="Menu">☰</button>
   </div>
 </header>
 
@@ -236,7 +37,7 @@ footer a:hover{color:#fff}
       <h1>Suas unhas merecem <em>esse carinho.</em></h1>
       <p class="lead">Manicure, pedicure, alongamento e cuidados especiais para os pés. Cuidado, beleza e carinho em cada detalhe — com hora marcada e sem fila de espera.</p>
       <div class="hero-btns">
-        <a href="#agendar" class="btn">📅 Agendar meu horário</a>
+        <a href="agendar.html" class="btn">📅 Agendar meu horário</a>
         <a href="#servicos" class="btn linha">Ver serviços</a>
       </div>
       <div class="selos">
@@ -245,8 +46,7 @@ footer a:hover{color:#fff}
         <div class="selo"><b>6 anos</b><small>de experiência</small></div>
       </div>
     </div>
-    <div class="hero-art">
-      <div class="mao">💅</div>
+    <div class="hero-foto" id="heroFoto">
       <div class="flutua f1"><i>🌸</i> Esmaltes premium</div>
       <div class="flutua f2"><i>⏰</i> Horário marcado</div>
     </div>
@@ -272,7 +72,7 @@ footer a:hover{color:#fff}
       <div>
         <span class="tag">🎉 Promoção de lançamento</span>
         <h2 class="titulo">Plástica <em>dos Pés</em></h2>
-        <p style="color:var(--texto-suave);font-weight:300;margin-bottom:8px">Um procedimento estético desenvolvido especialmente para melhorar a aparência e a textura da pele dos pés. Indicado para quem sofre com ressecamento, aspereza, excesso de pele e aspecto esbranquiçado.</p>
+        <p style="color:var(--texto-suave);font-weight:300;margin-bottom:10px">Um procedimento estético desenvolvido especialmente para melhorar a aparência e a textura da pele dos pés. Indicado para quem sofre com ressecamento, aspereza, excesso de pele e aspecto esbranquiçado.</p>
         <p style="color:var(--rosa);font-weight:600">Deixa os pés mais macios, hidratados e com aparência renovada.</p>
         <div class="passos">
           <div class="passo"><b>PASSO 1</b><span>Higienização e preparo dos pés</span></div>
@@ -282,78 +82,33 @@ footer a:hover{color:#fff}
         </div>
       </div>
       <div class="caixa-pes">
-        <span class="tag">Pele mais lisa e macia</span>
-        <h3 style="font-size:1.5rem;margin-bottom:6px">Sinta a diferença desde a primeira sessão</h3>
-        <ul>
-          <li>Indicado para ressecamento e aspereza</li>
-          <li>Reduz o excesso de pele e o aspecto esbranquiçado</li>
-          <li>Hidratação profunda e duradoura</li>
-          <li>Sessão de aproximadamente 60 minutos</li>
-        </ul>
-        <div style="margin:24px 0 20px">
-          <span style="font-size:.8rem;color:var(--texto-suave);text-decoration:line-through">De R$ 150,00</span>
-          <div class="preco" style="font-size:2.2rem">R$ 110,00 <small>na promoção de lançamento</small></div>
+        <div class="topo-foto" id="fotoPlastica"></div>
+        <div class="conteudo">
+          <span class="tag">Pele mais lisa e macia</span>
+          <h3 style="font-size:1.45rem;margin-bottom:4px">Sinta a diferença desde a primeira sessão</h3>
+          <ul>
+            <li>Indicado para ressecamento e aspereza</li>
+            <li>Reduz o excesso de pele e o aspecto esbranquiçado</li>
+            <li>Hidratação profunda e duradoura</li>
+            <li>Sessão de aproximadamente 60 minutos</li>
+          </ul>
+          <div style="margin:22px 0 18px">
+            <span style="font-size:.8rem;color:var(--texto-suave);text-decoration:line-through">De R$ 150,00</span>
+            <div class="preco" style="font-size:2.1rem">R$ 110,00 <small>na promoção de lançamento</small></div>
+          </div>
+          <a href="agendar.html?servico=Pl%C3%A1stica%20dos%20P%C3%A9s" class="btn">Quero agendar</a>
         </div>
-        <a href="#agendar" class="btn" onclick="preSelecionar('Plástica dos Pés')">Quero agendar</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══════════ AGENDAMENTO ══════════ -->
-<section id="agendar">
-  <div class="wrap">
-    <div class="center">
-      <span class="tag">Agendamento</span>
-      <h2 class="titulo">Marque seu horário <em>em 30 segundos</em></h2>
-      <p class="sub">Preencha os dados abaixo e o WhatsApp abre com a mensagem pronta. É só apertar enviar — a confirmação vem em seguida.</p>
-    </div>
-
-    <form class="form-box" id="formAgenda" onsubmit="enviarAgendamento(event)">
-      <div class="linha-campos">
-        <div class="campo">
-          <label for="nome">Seu nome *</label>
-          <input type="text" id="nome" placeholder="Como podemos te chamar?" required>
-        </div>
-        <div class="campo">
-          <label for="fone">Seu WhatsApp *</label>
-          <input type="tel" id="fone" placeholder="(11) 99999-9999" required>
-        </div>
-      </div>
-
-      <div class="linha-campos">
-        <div class="campo">
-          <label for="servico">Serviço desejado *</label>
-          <select id="servico" required><option value="">Selecione...</option></select>
-        </div>
-        <div class="campo">
-          <label for="data">Data *</label>
-          <input type="date" id="data" required onchange="montarHorarios()">
-        </div>
-      </div>
-
-      <div class="campo">
-        <label>Horário *</label>
-        <div class="horarios" id="grade">
-          <span style="grid-column:1/-1;color:var(--texto-suave);font-size:.86rem;font-weight:300">Escolha uma data para ver os horários livres.</span>
-        </div>
-      </div>
-
-      <div class="campo" style="margin-top:18px">
-        <label for="obs">Alguma observação? (opcional)</label>
-        <textarea id="obs" placeholder="Ex.: vou levar uma amiga, tenho preferência por cor nude, alergia a algum produto..."></textarea>
-      </div>
-
-      <div class="aviso" id="aviso"></div>
-
-      <div class="rodape-form">
-        <small>Ao enviar, o WhatsApp abre com a mensagem pronta. Seu horário só fica confirmado após a resposta da Flávia.</small>
-        <button type="submit" class="btn zap">
-          <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.86 1.21 3.06c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35zM12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.07L2 22l5.05-1.33A9.94 9.94 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
-          Enviar pelo WhatsApp
-        </button>
-      </div>
-    </form>
+<!-- ══════════ CHAMADA PARA AGENDAR ══════════ -->
+<section style="background:linear-gradient(135deg,var(--rosa),#FF4F91);color:#fff;padding:70px 0">
+  <div class="wrap center">
+    <h2 class="titulo" style="color:#fff;margin-bottom:10px">Pronta para marcar?</h2>
+    <p style="color:rgba(255,255,255,.9);font-weight:300;max-width:520px;margin:0 auto 28px">Escolha o serviço, o dia e o horário em menos de um minuto. A confirmação chega no seu WhatsApp.</p>
+    <a href="agendar.html" class="btn branco">📅 Agendar meu horário</a>
   </div>
 </section>
 
@@ -365,14 +120,9 @@ footer a:hover{color:#fff}
       <h2 class="titulo">Trabalhos que <em>falam por si</em></h2>
       <p class="sub">Acompanhe o dia a dia do estúdio e as novidades no Instagram.</p>
     </div>
-    <div class="galeria-grid">
-      <div class="foto">💅<b>Alongamento em gel</b></div>
-      <div class="foto">🦶<b>Plástica dos Pés</b></div>
-      <div class="foto">🌸<b>Nail art floral</b></div>
-      <div class="foto">✨<b>Francesinha clássica</b></div>
-    </div>
+    <div class="galeria-grid" id="galeriaGrid"></div>
     <div class="center" style="margin-top:36px">
-      <a href="https://instagram.com/SEU_INSTAGRAM" target="_blank" rel="noopener" class="btn">📸 Seguir no Instagram</a>
+      <a href="#" data-instagram target="_blank" rel="noopener" class="btn">📸 Seguir no Instagram</a>
     </div>
   </div>
 </section>
@@ -380,7 +130,7 @@ footer a:hover{color:#fff}
 <!-- ══════════ SOBRE ══════════ -->
 <section id="sobre">
   <div class="wrap sobre-grid">
-    <div class="retrato">👩‍🎨</div>
+    <div class="retrato" id="fotoSobre"></div>
     <div>
       <span class="tag">Sobre</span>
       <h2 class="titulo">Prazer, eu sou a <em>Flávia</em></h2>
@@ -401,14 +151,11 @@ footer a:hover{color:#fff}
       <p class="sub">Ambiente reservado, tranquilo e pensado para você relaxar.</p>
     </div>
     <div class="local-grid">
-      <div class="mapa">
-        <!-- >>> TROQUE O ENDEREÇO NO 'q=' ABAIXO PELO ENDEREÇO REAL <<< -->
-        <iframe src="https://www.google.com/maps?q=Avenida+Paulista+1000+São+Paulo&output=embed" loading="lazy" title="Mapa"></iframe>
-      </div>
+      <div class="mapa"><iframe id="mapaFrame" loading="lazy" title="Mapa do estúdio"></iframe></div>
       <div class="info-local">
-        <div class="item-local"><i>📍</i><div><b>Endereço</b><span id="txtEndereco">Rua Exemplo, 123 · Centro · Sua Cidade – UF</span></div></div>
+        <div class="item-local"><i>📍</i><div><b>Endereço</b><span data-endereco></span></div></div>
         <div class="item-local"><i>🕐</i><div><b>Horário de atendimento</b><span>Terça a sexta: 09h às 19h<br>Sábado: 09h às 17h<br>Domingo e segunda: fechado</span></div></div>
-        <div class="item-local"><i>💬</i><div><b>WhatsApp</b><span id="txtFone">—</span></div></div>
+        <div class="item-local"><i>💬</i><div><b>WhatsApp</b><span data-fone></span></div></div>
         <div class="item-local"><i>💳</i><div><b>Formas de pagamento</b><span>Pix, dinheiro, débito e crédito</span></div></div>
         <a href="#" id="btnRota" target="_blank" rel="noopener" class="btn linha" style="align-self:flex-start">🧭 Traçar rota</a>
       </div>
@@ -421,15 +168,15 @@ footer a:hover{color:#fff}
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <div class="logo" style="color:#fff;margin-bottom:14px"><span>💅</span> Flávia</div>
-        <p>Cuidado, beleza e carinho em cada detalhe. Manicure, pedicure, alongamento e Plástica dos Pés com hora marcada.</p>
+        <span data-logo class="claro" style="margin-bottom:16px"></span>
+        <p style="margin-top:16px">Manicure, pedicure, alongamento em gel e Plástica dos Pés com hora marcada.</p>
       </div>
       <div>
         <h4>Navegação</h4>
         <div class="foot-links">
           <a href="#servicos">Serviços</a>
           <a href="#plastica">Plástica dos Pés</a>
-          <a href="#agendar">Agendar horário</a>
+          <a href="agendar.html">Agendar horário</a>
           <a href="#galeria">Galeria</a>
           <a href="#sobre">Sobre</a>
         </div>
@@ -437,299 +184,63 @@ footer a:hover{color:#fff}
       <div>
         <h4>Contato</h4>
         <div class="foot-links">
-          <a href="#" id="footZap">WhatsApp</a>
-          <a href="https://instagram.com/SEU_INSTAGRAM" target="_blank" rel="noopener">Instagram</a>
-          <a href="#" onclick="abrirPainel(event)">Painel da profissional</a>
+          <a href="#" data-zap target="_blank" rel="noopener">WhatsApp</a>
+          <a href="#" data-instagram target="_blank" rel="noopener">Instagram</a>
+          <a href="#" data-abrir-painel>Painel da profissional</a>
         </div>
       </div>
     </div>
-    <div class="copy">
-      © <span id="ano"></span> Flávia Nail Studio · Procedimento estético — resultados podem variar conforme as características da pele.
-    </div>
+    <div class="copy">© <span data-ano></span> Flávia Nail Studio · Procedimento estético — resultados podem variar conforme as características da pele.</div>
   </div>
 </footer>
 
-<!-- ══════════ BOTÃO FLUTUANTE ══════════ -->
-<a href="#" id="zapFlut" class="zap-flut" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+<a href="#" data-zap class="zap-flut" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.86 1.21 3.06c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35zM12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.07L2 22l5.05-1.33A9.94 9.94 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
 </a>
 
-<!-- ══════════ MODAL PAINEL ══════════ -->
-<div class="modal" id="modalPainel">
-  <div class="modal-box">
-    <div class="modal-topo">
-      <h3 class="serif" style="font-size:1.5rem">Painel da profissional</h3>
-      <button class="fechar" onclick="fecharPainel()">×</button>
-    </div>
+<div class="modal" id="modalPainel"></div>
 
-    <!-- login -->
-    <div id="telaLogin">
-      <p style="color:var(--texto-suave);font-size:.88rem;font-weight:300;margin-bottom:18px">Área reservada. Informe a senha para ver os agendamentos e bloquear horários.</p>
-      <div class="campo">
-        <label for="senha">Senha</label>
-        <input type="password" id="senha" placeholder="••••••" onkeydown="if(event.key==='Enter')entrar()">
-      </div>
-      <div class="aviso" id="avisoLogin"></div>
-      <button class="btn" style="margin-top:18px" onclick="entrar()">Entrar</button>
-    </div>
-
-    <!-- painel -->
-    <div id="telaPainel" style="display:none">
-      <div class="abas">
-        <button class="aba ativa" onclick="trocarAba('ag',this)">Agendamentos</button>
-        <button class="aba" onclick="trocarAba('bl',this)">Bloquear horários</button>
-      </div>
-
-      <div class="painel-aba ativa" id="aba-ag">
-        <table class="tabela"><thead><tr>
-          <th>Data</th><th>Hora</th><th>Cliente</th><th>Serviço</th><th></th>
-        </tr></thead><tbody id="corpoAgenda"></tbody></table>
-        <div style="margin-top:20px;display:flex;gap:10px;flex-wrap:wrap">
-          <button class="btn pequeno linha" onclick="exportarCSV()">⬇ Exportar CSV</button>
-          <button class="btn pequeno linha" onclick="limparTudo()">🗑 Limpar tudo</button>
-        </div>
-      </div>
-
-      <div class="painel-aba" id="aba-bl">
-        <p style="color:var(--texto-suave);font-size:.88rem;font-weight:300;margin-bottom:16px">Marque um dia e horário que não estará disponível. Ele deixa de aparecer para as clientes.</p>
-        <div class="linha-campos">
-          <div class="campo"><label>Data</label><input type="date" id="blData"></div>
-          <div class="campo"><label>Horário</label><select id="blHora"></select></div>
-        </div>
-        <button class="btn pequeno" onclick="bloquear()">Bloquear</button>
-        <table class="tabela" style="margin-top:22px"><thead><tr><th>Data</th><th>Hora</th><th></th></tr></thead><tbody id="corpoBloqueios"></tbody></table>
-      </div>
-
-      <button class="btn pequeno linha" style="margin-top:26px" onclick="sair()">Sair</button>
-    </div>
-  </div>
-</div>
-
+<script src="config.js"></script>
+<script src="agenda.js"></script>
 <script>
-/* ════════════════════════════════════════════════════════════
-   >>>>>>>>>>  CONFIGURAÇÃO — EDITE SÓ ESTE BLOCO  <<<<<<<<<<
-   ════════════════════════════════════════════════════════════ */
-const CONFIG = {
-  // Número do WhatsApp com código do país, SÓ NÚMEROS.
-  // Brasil:   55 + DDD + número  →  "5511999999999"
-  // Portugal: 351 + número       →  "351910305226"
-  whatsapp: "351910305226",
+iniciarComum();
 
-  nomeEstudio: "Flávia Nail Studio",
-  endereco: "Rua Exemplo, 123 · Centro · Sua Cidade – UF",
-  senhaPainel: "flavia2026",   // troque por uma senha sua
+/* fotos das seções */
+document.getElementById("heroFoto").insertAdjacentHTML("afterbegin",
+  `<img src="${CONFIG.fotos.hero}" alt="Unhas feitas no estúdio" loading="eager">`);
+document.getElementById("fotoPlastica").innerHTML =
+  `<img src="${CONFIG.fotos.plastica}" alt="Pés cuidados após a Plástica dos Pés" loading="lazy">`;
+document.getElementById("fotoSobre").innerHTML =
+  `<img src="${CONFIG.fotos.sobre}" alt="Flávia atendendo uma cliente" loading="lazy">`;
 
-  // Horários oferecidos por dia
-  horarios: ["09:00","10:00","11:00","13:00","14:00","15:00","16:00","17:00","18:00"],
-
-  // Dias fechados (0=domingo, 1=segunda ... 6=sábado)
-  diasFechados: [0,1],
-
-  // Lista de serviços do site e do formulário
-  servicos: [
-    {ico:"💅", nome:"Manicure",            desc:"Cutilagem caprichada, lixamento e esmaltação com acabamento perfeito.", preco:"R$ 45,00", obs:"aprox. 45 min"},
-    {ico:"🦶", nome:"Pedicure",            desc:"Cuidado completo dos pés, com esfoliação e hidratação.",                preco:"R$ 55,00", obs:"aprox. 50 min"},
-    {ico:"✨", nome:"Mão + Pé",            desc:"O combo mais pedido: manicure e pedicure no mesmo atendimento.",       preco:"R$ 85,00", obs:"aprox. 1h30"},
-    {ico:"💎", nome:"Alongamento em Gel",  desc:"Unhas alongadas, resistentes e naturais, no formato que você quiser.", preco:"R$ 160,00", obs:"aprox. 2h"},
-    {ico:"🎨", nome:"Nail Art",            desc:"Desenhos, pedrarias e encapsuladas para deixar sua unha única.",        preco:"a partir de R$ 15,00", obs:"por unha"},
-    {ico:"🌸", nome:"Plástica dos Pés",    desc:"Novidade! Remove asperezas e devolve maciez e aparência renovada.",     preco:"R$ 110,00", obs:"promoção de lançamento", destaque:true}
-  ]
-};
-/* ══════════ FIM DA CONFIGURAÇÃO ══════════ */
-
-
-/* ---------- utilidades de armazenamento (seguro) ---------- */
-const DB = {
-  ler(chave){ try{ return JSON.parse(localStorage.getItem(chave)||"[]"); }catch(e){ return []; } },
-  gravar(chave,valor){ try{ localStorage.setItem(chave,JSON.stringify(valor)); }catch(e){ /* modo privado */ } }
-};
-const CHAVE_AG = "flavia_agendamentos";
-const CHAVE_BL = "flavia_bloqueios";
-
-/* ---------- montagem inicial ---------- */
-document.getElementById("ano").textContent = new Date().getFullYear();
-const linkZap = "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent("Olá! Vim pelo site e gostaria de agendar um horário 💅");
-document.getElementById("zapFlut").href = linkZap;
-document.getElementById("footZap").href = linkZap;
-document.getElementById("txtEndereco").textContent = CONFIG.endereco;
-document.getElementById("txtFone").textContent = formatarFone(CONFIG.whatsapp);
-document.getElementById("btnRota").href = "https://www.google.com/maps/dir/?api=1&destination=" + encodeURIComponent(CONFIG.endereco);
-
-function formatarFone(n){
-  if(n.startsWith("55") && n.length>=12) return "+55 (" + n.slice(2,4) + ") " + n.slice(4,-4) + "-" + n.slice(-4);
-  if(n.startsWith("351")) return "+351 " + n.slice(3,6) + " " + n.slice(6,9) + " " + n.slice(9);
-  return "+" + n;
-}
-
-// cards de serviço
+/* cards de serviço */
 document.getElementById("listaServicos").innerHTML = CONFIG.servicos.map(s => `
-  <div class="card ${s.destaque?'destaque':''}">
-    ${s.destaque?'<span class="fita">Novidade</span>':''}
-    <div class="ico">${s.ico}</div>
-    <h3>${s.nome}</h3>
-    <p>${s.desc}</p>
-    <div class="preco">${s.preco}<small>${s.obs}</small></div>
-    <a href="#agendar" class="btn pequeno ${s.destaque?'':'linha'}" style="margin-top:16px;align-self:flex-start;${s.destaque?'background:#fff;color:var(--rosa)':''}" onclick="preSelecionar('${s.nome}')">Agendar</a>
+  <div class="card ${s.destaque ? 'destaque' : ''}">
+    ${s.destaque ? '<span class="fita">Novidade</span>' : ''}
+    <div class="card-foto"><img src="${s.foto}" alt="${s.nome}" loading="lazy"></div>
+    <div class="card-corpo">
+      <h3>${s.nome}</h3>
+      <p>${s.desc}</p>
+      <div class="preco">${s.preco}<small>${s.obs}</small></div>
+      <a href="agendar.html?servico=${encodeURIComponent(s.nome)}" class="btn pequeno ${s.destaque ? '' : 'linha'}" style="margin-top:16px;align-self:flex-start">Agendar</a>
+    </div>
   </div>`).join("");
 
-// opções do select
-const sel = document.getElementById("servico");
-CONFIG.servicos.forEach(s => sel.add(new Option(s.nome + " — " + s.preco, s.nome)));
+/* galeria */
+document.getElementById("galeriaGrid").innerHTML = CONFIG.fotos.galeria.map(f => `
+  <div class="foto"><img src="${f.url}" alt="${f.legenda}" loading="lazy"><b>${f.legenda}</b></div>`).join("");
 
-// select de horários do painel
-const selBl = document.getElementById("blHora");
-CONFIG.horarios.forEach(h => selBl.add(new Option(h,h)));
+/* mapa e rota */
+document.getElementById("mapaFrame").src =
+  "https://www.google.com/maps?q=" + encodeURIComponent(CONFIG.endereco) + "&output=embed";
+document.getElementById("btnRota").href =
+  "https://www.google.com/maps/dir/?api=1&destination=" + encodeURIComponent(CONFIG.endereco);
 
-// data mínima = hoje
-document.getElementById("data").min = new Date().toISOString().split("T")[0];
-
-/* ---------- navegação ---------- */
-function alternarMenu(){ document.getElementById("menu").classList.toggle("aberto"); }
-document.querySelectorAll("#menu a").forEach(a => a.addEventListener("click",()=>document.getElementById("menu").classList.remove("aberto")));
-window.addEventListener("scroll",()=>document.getElementById("topo").classList.toggle("solido",scrollY>60));
-
-function preSelecionar(nome){ document.getElementById("servico").value = nome; }
-
-/* ---------- grade de horários ---------- */
-let horaEscolhida = null;
-function montarHorarios(){
-  const data = document.getElementById("data").value;
-  const grade = document.getElementById("grade");
-  horaEscolhida = null;
-  if(!data){ grade.innerHTML = ""; return; }
-
-  const dia = new Date(data + "T12:00:00").getDay();
-  if(CONFIG.diasFechados.includes(dia)){
-    grade.innerHTML = '<span style="grid-column:1/-1;color:#B4123C;font-size:.86rem">Não atendemos nesse dia. Escolha outra data 💗</span>';
-    return;
-  }
-
-  const ocupados = [
-    ...DB.ler(CHAVE_AG).filter(a=>a.data===data).map(a=>a.hora),
-    ...DB.ler(CHAVE_BL).filter(b=>b.data===data).map(b=>b.hora)
-  ];
-
-  grade.innerHTML = CONFIG.horarios.map(h =>
-    `<div class="hora ${ocupados.includes(h)?'ocupada':''}" ${ocupados.includes(h)?'':`onclick="escolherHora(this,'${h}')"`}>${h}</div>`
-  ).join("");
-}
-function escolherHora(el,h){
-  document.querySelectorAll(".hora").forEach(x=>x.classList.remove("ativa"));
-  el.classList.add("ativa");
-  horaEscolhida = h;
-}
-
-/* ---------- envio ---------- */
-function mostrarAviso(texto,tipo){
-  const a = document.getElementById("aviso");
-  a.textContent = texto;
-  a.className = "aviso " + tipo;
-  a.scrollIntoView({behavior:"smooth",block:"center"});
-}
-
-function enviarAgendamento(e){
-  e.preventDefault();
-  const nome = document.getElementById("nome").value.trim();
-  const fone = document.getElementById("fone").value.trim();
-  const servico = document.getElementById("servico").value;
-  const data = document.getElementById("data").value;
-  const obs = document.getElementById("obs").value.trim();
-
-  if(!horaEscolhida){ mostrarAviso("Escolha um horário disponível para continuar.","erro"); return; }
-
-  const dataBr = data.split("-").reverse().join("/");
-
-  // salva localmente (para o painel e para bloquear o horário)
-  const lista = DB.ler(CHAVE_AG);
-  lista.push({nome,fone,servico,data,hora:horaEscolhida,obs,criado:new Date().toISOString()});
-  DB.gravar(CHAVE_AG,lista);
-
-  const msg =
-`Olá! Gostaria de agendar um horário 💅
-
-*Nome:* ${nome}
-*WhatsApp:* ${fone}
-*Serviço:* ${servico}
-*Data:* ${dataBr}
-*Horário:* ${horaEscolhida}` + (obs ? `\n*Observação:* ${obs}` : "") + `
-
-Enviado pelo site do ${CONFIG.nomeEstudio}`;
-
-  window.open("https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(msg), "_blank");
-
-  mostrarAviso("Pedido montado! O WhatsApp abriu numa nova aba — é só apertar enviar. 💗","ok");
-  document.getElementById("formAgenda").reset();
-  montarHorarios();
-}
-
-/* ---------- painel ---------- */
-function abrirPainel(e){ if(e) e.preventDefault(); document.getElementById("modalPainel").classList.add("aberto"); }
-function fecharPainel(){ document.getElementById("modalPainel").classList.remove("aberto"); }
-document.getElementById("modalPainel").addEventListener("click",e=>{ if(e.target.id==="modalPainel") fecharPainel(); });
-
-function entrar(){
-  const av = document.getElementById("avisoLogin");
-  if(document.getElementById("senha").value === CONFIG.senhaPainel){
-    document.getElementById("telaLogin").style.display = "none";
-    document.getElementById("telaPainel").style.display = "block";
-    av.className = "aviso";
-    renderPainel();
-  } else {
-    av.textContent = "Senha incorreta.";
-    av.className = "aviso erro";
-  }
-}
-function sair(){
-  document.getElementById("telaPainel").style.display = "none";
-  document.getElementById("telaLogin").style.display = "block";
-  document.getElementById("senha").value = "";
-}
-function trocarAba(id,btn){
-  document.querySelectorAll(".aba").forEach(b=>b.classList.remove("ativa"));
-  document.querySelectorAll(".painel-aba").forEach(p=>p.classList.remove("ativa"));
-  btn.classList.add("ativa");
-  document.getElementById("aba-"+id).classList.add("ativa");
-}
-
-function renderPainel(){
-  const ags = DB.ler(CHAVE_AG).sort((a,b)=>(a.data+a.hora).localeCompare(b.data+b.hora));
-  const corpo = document.getElementById("corpoAgenda");
-  corpo.innerHTML = ags.length ? ags.map((a,i)=>`
-    <tr>
-      <td>${a.data.split("-").reverse().join("/")}</td>
-      <td><b>${a.hora}</b></td>
-      <td>${a.nome}<br><a href="https://wa.me/${a.fone.replace(/\D/g,"")}" target="_blank" style="color:var(--rosa);font-size:.78rem">${a.fone}</a></td>
-      <td>${a.servico}${a.obs?`<br><small style="color:var(--texto-suave)">${a.obs}</small>`:""}</td>
-      <td><button class="mini" onclick="excluirAg(${i})">excluir</button></td>
-    </tr>`).join("") : `<tr><td colspan="5" class="vazio">Nenhum agendamento registrado ainda.</td></tr>`;
-
-  const bls = DB.ler(CHAVE_BL);
-  document.getElementById("corpoBloqueios").innerHTML = bls.length ? bls.map((b,i)=>`
-    <tr><td>${b.data.split("-").reverse().join("/")}</td><td><b>${b.hora}</b></td>
-    <td><button class="mini" onclick="desbloquear(${i})">liberar</button></td></tr>`).join("")
-    : `<tr><td colspan="3" class="vazio">Nenhum horário bloqueado.</td></tr>`;
-}
-
-function excluirAg(i){ const l=DB.ler(CHAVE_AG).sort((a,b)=>(a.data+a.hora).localeCompare(b.data+b.hora)); l.splice(i,1); DB.gravar(CHAVE_AG,l); renderPainel(); montarHorarios(); }
-function bloquear(){
-  const data = document.getElementById("blData").value, hora = document.getElementById("blHora").value;
-  if(!data) return;
-  const l = DB.ler(CHAVE_BL);
-  if(!l.some(b=>b.data===data&&b.hora===hora)) l.push({data,hora});
-  DB.gravar(CHAVE_BL,l); renderPainel(); montarHorarios();
-}
-function desbloquear(i){ const l=DB.ler(CHAVE_BL); l.splice(i,1); DB.gravar(CHAVE_BL,l); renderPainel(); montarHorarios(); }
-function limparTudo(){ if(confirm("Apagar todos os agendamentos salvos neste aparelho?")){ DB.gravar(CHAVE_AG,[]); renderPainel(); montarHorarios(); } }
-
-function exportarCSV(){
-  const l = DB.ler(CHAVE_AG);
-  const csv = "Data;Hora;Cliente;WhatsApp;Servico;Observacao\n" +
-    l.map(a=>[a.data,a.hora,a.nome,a.fone,a.servico,(a.obs||"").replace(/;/g,",")].join(";")).join("\n");
-  const url = URL.createObjectURL(new Blob(["﻿"+csv],{type:"text/csv;charset=utf-8"}));
-  const a = document.createElement("a");
-  a.href = url; a.download = "agendamentos.csv"; a.click();
-  URL.revokeObjectURL(url);
-}
+/* menu */
+const menu = document.getElementById("menu");
+document.getElementById("btnMenu").addEventListener("click", () => menu.classList.toggle("aberto"));
+menu.querySelectorAll("a").forEach(a => a.addEventListener("click", () => menu.classList.remove("aberto")));
+addEventListener("scroll", () => document.getElementById("topo").classList.toggle("solido", scrollY > 60));
 </script>
 </body>
 </html>
