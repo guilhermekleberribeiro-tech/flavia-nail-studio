@@ -54,7 +54,7 @@ const CONFIG = {
       desc: "Cutilagem caprichada, lixamento e esmaltação com acabamento perfeito.",
       preco: "R$ 45,00",
       obs: "aprox. 45 min",
-      foto: "https://images.unsplash.com/photo-1610992015762-45dca7fa3a85?auto=format&fit=crop&w=700&q=80"
+      foto: "https://images.unsplash.com/photo-1612887390768-fb02affea7a6?auto=format&fit=crop&w=700&q=80"
     },
     {
       nome: "Pedicure",
@@ -82,7 +82,7 @@ const CONFIG = {
       desc: "Desenhos, pedrarias e encapsuladas para deixar sua unha única.",
       preco: "a partir de R$ 15,00",
       obs: "por unha",
-      foto: "https://images.unsplash.com/photo-1736434518489-0eb84070017f?auto=format&fit=crop&w=700&q=80"
+      foto: "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=700&q=80"
     },
     {
       nome: "Plástica dos Pés",
@@ -98,14 +98,14 @@ const CONFIG = {
   /* ---------- 5. FOTOS DAS SEÇÕES ---------- */
 
   fotos: {
-    hero:     "https://images.unsplash.com/photo-1571290274554-6a2eaa771e5f?auto=format&fit=crop&w=900&q=80",
+    hero:     "https://images.unsplash.com/photo-1610992015762-45dca7fa3a85?auto=format&fit=crop&w=900&q=80",
     sobre:    "https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=900&q=80",
     plastica: "https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?auto=format&fit=crop&w=900&q=80",
     galeria: [
       { url:"https://images.unsplash.com/photo-1630843599725-32ead7671867?auto=format&fit=crop&w=700&q=80", legenda:"Francesinha clássica" },
-      { url:"https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=700&q=80", legenda:"Nail art autoral" },
+      { url:"https://images.unsplash.com/photo-1571290274554-6a2eaa771e5f?auto=format&fit=crop&w=700&q=80", legenda:"Nail art colorida" },
       { url:"https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?auto=format&fit=crop&w=700&q=80", legenda:"Plástica dos Pés" },
-      { url:"https://images.unsplash.com/photo-1612887390768-fb02affea7a6?auto=format&fit=crop&w=700&q=80", legenda:"Esmaltação em rosa" }
+      { url:"https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=700&q=80", legenda:"Esmaltação nude" }
     ]
   }
 };

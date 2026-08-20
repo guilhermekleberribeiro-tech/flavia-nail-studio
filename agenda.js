@@ -19,7 +19,7 @@ function montarLogos(){
     el.innerHTML = `
       <span class="logo-marca">${svgEsmalte}</span>
       <span class="logo-texto">
-        <span class="logo-nome">Flávia <span class="coracao">♥</span></span>
+        <span class="logo-nome">Flávia <svg class="coracao" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-8-4.9-8-10.4A4.6 4.6 0 0 1 12 7a4.6 4.6 0 0 1 8 3.6C20 16.1 12 21 12 21z"/></svg></span>
         <span class="logo-slogan">${CONFIG.slogan}</span>
       </span>`;
   });

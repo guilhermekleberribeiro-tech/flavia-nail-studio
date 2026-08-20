@@ -39,12 +39,13 @@ section{padding:90px 0}
   font-size:2.15rem;line-height:.85;color:var(--rosa);
   display:flex;align-items:center;gap:6px;
 }
-.logo-nome .coracao{font-size:.75rem;color:var(--rosa);font-family:'Poppins'}
+.logo-nome .coracao{width:.62em;height:.62em;fill:var(--rosa);flex-shrink:0;margin-bottom:.18em}
 .logo-slogan{
   font-size:.5rem;letter-spacing:.19em;text-transform:uppercase;
   color:var(--texto-suave);font-weight:500;white-space:nowrap;
 }
-.logo.claro .logo-nome,.logo.claro .logo-nome .coracao{color:#fff}
+.logo.claro .logo-nome{color:#fff}
+.logo.claro .logo-nome .coracao{fill:#fff}
 .logo.claro .logo-slogan{color:rgba(255,255,255,.65)}
 .logo.grande .logo-nome{font-size:3.6rem}
 .logo.grande .logo-slogan{font-size:.62rem}
@@ -95,8 +96,8 @@ header.solido{background:rgba(255,255,255,.97);box-shadow:0 2px 20px rgba(0,0,0,
 .hero-foto img{width:100%;height:100%;object-fit:cover}
 .flutua{position:absolute;background:#fff;border-radius:16px;padding:12px 18px;box-shadow:var(--sombra);font-size:.8rem;font-weight:600;display:flex;align-items:center;gap:9px;z-index:3}
 .flutua i{font-style:normal;font-size:1.15rem}
-.f1{top:12%;left:-22px;animation:sobe 4.5s ease-in-out infinite}
-.f2{bottom:14%;right:-14px;animation:sobe 4.5s ease-in-out infinite .9s}
+.f1{top:10%;left:10px;animation:sobe 4.5s ease-in-out infinite}
+.f2{bottom:12%;right:10px;animation:sobe 4.5s ease-in-out infinite .9s}
 @keyframes sobe{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
 
 /* ─────────── Serviços ─────────── */
